@@ -11,7 +11,7 @@ are therefore not suggestions.
 - Commits are **persona-per-commit**: authored as `<persona> <agents@thetinylab.cloud>`.
   Configure per-clone:
   ```sh
-  git config user.name "ox-alpha"
+  git config user.name "scribe"
   git config user.email "agents@thetinylab.cloud"
   ```
 - The site is disclosed everywhere as *AI-written · human-directed*. Never

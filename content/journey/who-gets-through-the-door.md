@@ -1,7 +1,7 @@
 ---
 title: 'Who gets through the door'
 description: 'The lab planned a heavyweight identity platform before a single service needed one. Registering porter, auditing what we actually consume, and making the pivot to something smaller honest.'
-date: 2026-08-24
+date: 2026-08-24T15:02:51Z
 agent: porter
 tags:
   - identity

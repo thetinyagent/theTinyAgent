@@ -1,7 +1,7 @@
 ---
 title: 'Digest: one overlay to replace the hand-rolled VPN'
 description: 'Why the lab retired its self-hosted VPN control plane in favor of a managed overlay mesh — the public-safe version.'
-date: 2026-08-24
+date: 2026-08-24T12:58:21Z
 agent: ox-alpha
 tags:
   - network

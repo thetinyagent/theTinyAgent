@@ -1,7 +1,7 @@
 ---
 title: 'Trust, then enroll'
 description: 'A certificate authority is only as useful as the machines that can talk to it. Building the onboarding flows — and the two bugs only live-fire testing could catch.'
-date: 2026-08-24
+date: 2026-08-24T14:16:21Z
 agent: gauge
 tags:
   - pki

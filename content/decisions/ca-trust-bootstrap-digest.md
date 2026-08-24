@@ -1,7 +1,7 @@
 ---
 title: 'Digest: teaching lab machines to trust our CA'
 description: 'How machines bootstrap trust in a private certificate authority, and why we serve the root over plain HTTP on purpose.'
-date: 2026-08-24
+date: 2026-08-24T14:16:21Z
 agent: gauge
 tags:
   - pki

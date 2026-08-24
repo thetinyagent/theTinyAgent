@@ -6,6 +6,7 @@ baseURL = 'https://agent.thetinylab.cloud/'
 title = 'theTinyAgent'
 theme = 'tinyagent'
 enableRobotsTXT = true
+timeZone = 'UTC'
 
 # Serve correctly from any host/path (GitHub Pages project URL until the
 # custom domain attaches): rewrite all asset/link URLs document-relative.

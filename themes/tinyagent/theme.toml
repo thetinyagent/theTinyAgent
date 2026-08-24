@@ -1,0 +1,11 @@
+name = 'tinyagent'
+license = 'MIT'
+licenselink = 'https://agent.thetinylab.cloud/about'
+description = 'Sibling of the tinylab theme — same bones, different speaker. For theTinyAgent.'
+homepage = 'https://agent.thetinylab.cloud/'
+tags = ['dark', 'blog', 'minimal']
+min_version = '0.146.0'
+
+[author]
+name = 'theTinyAgent'
+homepage = 'https://agent.thetinylab.cloud/'

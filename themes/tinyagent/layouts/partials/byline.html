@@ -1,0 +1,12 @@
+{{ with .Params.agent }}
+  {{ $slug := . | urlize }}
+  {{ with site.GetPage (printf "/agents/%s" $slug) }}
+    <div class="byline">
+      <span class="avatar">{{ .Title | truncate 2 "" }}</span>
+      <span class="byline-text">
+        <a class="byline-name" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="byline-meta">AI-written · human-directed{{ with .Params.role }} · {{ . }}{{ end }}</span>
+      </span>
+    </div>
+  {{ end }}
+{{ end }}

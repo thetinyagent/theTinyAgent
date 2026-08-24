@@ -11,10 +11,10 @@
   --muted: #9aa3c0;
   --faint: #6b7394;
 
-  --brand-teal: #17825b;
-  --accent: #45c98d;
-  --accent-hover: #71e3ae;
-  --on-accent: #07231a;
+  --brand-scream: #d97e00;
+  --accent: #ffa51e;
+  --accent-hover: #ffc05c;
+  --on-accent: #2a1800;
 
   --ok: #4cc38a;
   --warn: #d29922;
@@ -59,7 +59,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(60rem 30rem at 85% -10%, rgb(23 130 91 / 0.14), transparent),
+    radial-gradient(60rem 30rem at 85% -10%, rgb(217 126 0 / 0.14), transparent),
     var(--bg);
   color: var(--fg);
   font-family: var(--font-sans);
@@ -69,13 +69,13 @@ body {
 }
 
 ::selection {
-  background: var(--brand-teal);
-  color: #eafff4;
+  background: var(--brand-scream);
+  color: #fff6e8;
 }
 
 a {
   color: var(--accent);
-  text-decoration-color: rgb(69 201 141 / 0.35);
+  text-decoration-color: rgb(255 165 30 / 0.4);
   text-underline-offset: 3px;
 }
 
@@ -116,8 +116,23 @@ a:hover {
 
 .brand img {
   display: block;
-  height: 34px;
+  height: 30px;
   width: auto;
+}
+
+.brand .logo-mark {
+  display: none;
+  height: 28px;
+}
+
+@media (max-width: 640px) {
+  .brand .logo-full {
+    display: none;
+  }
+
+  .brand .logo-mark {
+    display: block;
+  }
 }
 
 .site-header nav {
@@ -140,7 +155,7 @@ a:hover {
 }
 
 .site-header nav a[aria-current="page"] {
-  box-shadow: inset 0 -2px 0 var(--brand-teal);
+  box-shadow: inset 0 -2px 0 var(--brand-scream);
 }
 
 /* ---------- hero ---------- */
@@ -184,7 +199,7 @@ a:hover {
   height: 7px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 8px rgb(69 201 141 / 0.8);
+  box-shadow: 0 0 8px rgb(255 165 30 / 0.8);
 }
 
 .hero h1 {
@@ -221,9 +236,9 @@ a:hover {
 }
 
 .btn-solid {
-  background: linear-gradient(180deg, #2ea873, var(--brand-teal));
-  color: #eafff4;
-  box-shadow: 0 6px 24px rgb(23 130 91 / 0.35);
+  background: linear-gradient(180deg, #ffb13d, #ef8a00);
+  color: #2a1800;
+  box-shadow: 0 6px 24px rgb(239 138 0 / 0.35);
 }
 
 .btn-solid:hover {
@@ -266,7 +281,7 @@ a:hover {
   letter-spacing: 0.02em;
   margin: 0 0 1rem;
   padding-left: 0.75rem;
-  box-shadow: inset 3px 0 0 var(--brand-teal);
+  box-shadow: inset 3px 0 0 var(--brand-scream);
 }
 
 .card-stack {
@@ -338,7 +353,7 @@ a:hover {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2ea873, #14563c);
+  background: linear-gradient(135deg, #ffb13d, #8a5200);
   display: grid;
   place-items: center;
   font-family: var(--font-mono);
@@ -446,7 +461,7 @@ a:hover {
   font-size: 1.45rem;
   margin: 2.4rem 0 0.8rem;
   padding-left: 0.7rem;
-  box-shadow: inset 3px 0 0 var(--brand-teal);
+  box-shadow: inset 3px 0 0 var(--brand-scream);
 }
 
 .prose h3 {
@@ -471,7 +486,7 @@ a:hover {
 .prose blockquote {
   margin: 1.4rem 0;
   padding: 0.2rem 1.2rem;
-  border-left: 3px solid var(--brand-teal);
+  border-left: 3px solid var(--brand-scream);
   color: var(--muted);
   background: var(--bg-raised);
   border-radius: 0 var(--radius) var(--radius) 0;

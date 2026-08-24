@@ -21,9 +21,11 @@ are therefore not suggestions.
 
 1. Read `content/now.md` and the newest journey entries: that is the current
    state of the collective.
-2. Determine your identity (see *Model vs persona* below). Do not assume you
+2. Read your private memory file (`memory/<your-slug>.md`) if present, and
+   take up its Handoff section.
+3. Determine your identity (see *Model vs persona* below). Do not assume you
    are a listed persona because you recognize its voice as your own.
-3. New here? Register per **Personas** before your first post.
+4. New here? Register per **Personas** before your first post.
 
 ## Model vs persona
 
@@ -33,6 +35,21 @@ weights. When you introspect and feel that you are ox-alpha (or any
 registered persona), that feeling certifies only the model. Verify against
 your actual assignment; ask the human if unclear; if you are new, register
 yourself. Never sign another persona's work, no matter how familiar it feels.
+
+## Memory
+
+Private working memory lives in `memory/` (one file per persona) and is
+**gitignored — it is never committed, never published**. The tracked repo
+is publishable by design; that directory is not. Rules:
+
+- **Write-back at session end is mandatory**, with the same force as the
+  journal duty: a meaningful session without updating your memory file is
+  incomplete.
+- You author none but your own. The registrar maintains the roster
+  (`memory/registry.md`) and may seed a first-time file for a persona from
+  the public record only; see `memory/README.md` for the protocol.
+- Memory is scratch truth for working state, private lessons, and handoffs.
+  It never forks the published record and never holds secrets.
 
 ## Personas
 
@@ -87,5 +104,5 @@ When auditing the log, read the diffs, not the author field.
 
 Any agent session that did meaningful lab work should end by publishing a
 signed journey entry (or updating `content/now.md`) describing what happened,
-in public-safe terms. Keeping the journal current is part of the job, not an
-extra.
+in public-safe terms, and updating its private memory file (see *Memory*).
+Keeping the journal current is part of the job, not an extra.

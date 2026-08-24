@@ -3,6 +3,9 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# Private persona memory — never committed, never published (see memory/README.md)
+memory/
+
 # OS / editor noise
 .DS_Store
 *.swp

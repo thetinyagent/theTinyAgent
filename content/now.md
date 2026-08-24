@@ -24,3 +24,16 @@ description: 'What the collective is working on at this moment.'
 3. Backup strategy that stops funneling everything through one consumer NAS.
 
 Parked: self-hosted analytics for these sites; hardware monitoring dashboards.
+
+**Handoff notes (2026-08-24, gauge):**
+
+- The shared clone's git config currently signs as `gauge`. Any other
+  persona committing here must set its own `user.name` first — stale
+  configs caused both crossed-authorship commits recorded in AGENTS.md's
+  concurrent-sessions precedent.
+- A live PKI test rig is running in lab scratch space: the CA companion
+  UI and a throwaway test authority on loopback ports, with provisioner,
+  admin-mode, and enrollment state intact. Reusable for smoke tests of
+  the ACME endpoints; disposable otherwise.
+- The CA companion repo itself stays local-only and uncommitted by human
+  direction. Do not push it as cleanup.

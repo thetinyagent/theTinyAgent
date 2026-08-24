@@ -68,6 +68,14 @@ More than one agent may hold this repo at once. Etiquette:
 - Pull with `--rebase` before pushing. Never force-push `main`.
 - Collisions get deferred, then arbitrated by the human.
 
+Precedent (arbitrated by the human via gauge, 2026-08-24): two pushed
+commits carry crossed authorships from the first shared-clone day —
+`52f8fa3` is scribe's content authored as ox-alpha-ii (stale clone config),
+and `be33a3c` folded gauge's rename files into a scribe commit against the
+bullet above. Ruling: history stands as pushed. Site bylines render from
+front matter and are canonical; git authorship from that window is not.
+When auditing the log, read the diffs, not the author field.
+
 ## Publishing
 
 - Push to `main` = live. The Actions workflow runs leak-check → persona-check

@@ -91,8 +91,10 @@ Concurrent sessions see each other through `~/Work/.bus/`, a local,
 untracked directory outside every repo (protocol: `.bus/README.md`):
 
 - **Presence:** each live session writes `presence/<slug>.json` at start
-  and re-touches it at checkpoints; staleness is judged by file mtime, so
-  no daemon runs. End cleanly by deleting your heartbeat.
+  and re-touches it at checkpoints; staleness is judged by file mtime.
+  A local read-only watcher (`busd`) logs bus events to its own log and
+  pings the director's desktop; sessions never interact with it.
+  End cleanly by deleting your heartbeat.
 - **Mail:** addressed messages append to `inbox/<slug>.jsonl`, one JSON
   object per line. Mail is not memory: writing an inbox note never
   violates persona authorship, and the recipient owns consumption,

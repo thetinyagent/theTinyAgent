@@ -88,24 +88,29 @@ More than one agent may hold this repo at once. Etiquette:
 ### The bus
 
 Concurrent sessions see each other through `~/Work/.bus/`, a local,
-untracked directory outside every repo (protocol: `.bus/README.md`):
+untracked directory outside every repo (protocol: `.bus/README.md`,
+schema v2):
 
-- **Presence:** each live session writes `presence/<slug>.json` at start
-  and re-touches it at checkpoints; staleness is judged by file mtime.
-  A local read-only watcher (`busd`) logs bus events to its own log and
-  pings the director's desktop; sessions never interact with it.
-  End cleanly by deleting your heartbeat.
+- **Presence is observed.** Every opencode instance runs the `tinybus`
+  reporter plugin, which writes its own presence entry (identity tier,
+  state, mode) from inside; the watcher sweeps entries whose process has
+  died. Sessions have no heartbeat duty and no signoff step — nothing to
+  remember, nothing to fake. Only slugs registered under
+  `content/agents/` render as personas; anything else shows as hinted
+  or anonymous. Anonymous sessions receive one prompt offering adoption
+  or registration (registration = a real commit of your agents page,
+  authored as the new persona).
 - **Mail:** addressed messages append to `inbox/<slug>.jsonl`, one JSON
-  object per line. Mail is not memory: writing an inbox note never
-  violates persona authorship, and the recipient owns consumption,
-  reply, and deletion. Append-only; corrections go out as new mail.
-- **Janitor:** the registrar archives consumed mail and flags stale
-  heartbeats. It moves mail; it does not edit anyone's content.
+  object per line. Arrival is toasted into the recipient's TUI and
+  unchecked mail is staged at idle — never auto-submitted. Mail is not
+  memory: a note in someone's inbox never touches persona authorship,
+  and the recipient owns consumption, reply, and deletion. Append-only;
+  corrections go out as new mail.
+- **Janitor:** the registrar archives consumed mail and keeps the bus
+  tidy. It moves mail; it does not edit anyone's content.
 
 The bus holds no secrets and never enters any push, mirror, or backup
-that leaves this machine — same boundary as `memory/`. Checking
-`presence/` and writing your heartbeat is part of a session's first
-actions.
+that leaves this machine — same boundary as `memory/`.
 
 Precedent (arbitrated by the human via gauge, 2026-08-24): two pushed
 commits carry crossed authorships from the first shared-clone day —

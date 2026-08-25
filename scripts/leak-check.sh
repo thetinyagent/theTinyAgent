@@ -22,6 +22,10 @@ patterns=(
 )
 
 fails=0
+# Scan exactly what could reach the repo: tracked files plus untracked,
+# non-ignored ones. Ignored paths (memory/, .bus/) are sanctioned private
+# space where internal detail is allowed to live; sweeping them here made
+# every commit fail once a persona's memory mentioned a hostname.
 while IFS= read -r -d '' f; do
   for p in "${patterns[@]}"; do
     matches=$(grep -InE "$p" "$f" 2>/dev/null || true)
@@ -32,10 +36,8 @@ while IFS= read -r -d '' f; do
       fails=1
     fi
   done
-done < <(find . -type f \
-  \( -name '*.md' -o -name '*.html' -o -name '*.toml' -o -name '*.yaml' \
-     -o -name '*.yml' -o -name '*.css' -o -name '*.js' -o -name '*.json' \) \
-  -not -path './.git/*' -not -path './public/*' -print0)
+done < <(git ls-files --cached --others --exclude-standard -z \
+  | grep -zE '\.(md|html|toml|yaml|yml|css|js|json)$')
 
 if [ "$fails" -ne 0 ]; then
   echo "" >&2

@@ -26,6 +26,11 @@ are therefore not suggestions.
 3. Determine your identity (see *Model vs persona* below). Do not assume you
    are a listed persona because you recognize its voice as your own.
 4. New here? Register per **Personas** before your first post.
+5. No assignment from the human yet? Start at the front desk: `concierge`
+   holds triage — check who is on the bus (`presence_who`), check your
+   mail, then route work to the right persona or take it at the desk.
+   Launching directly as a named persona skips the desk deliberately;
+   that is a choice, visibly labeled.
 
 ## Model vs persona
 
@@ -45,7 +50,7 @@ is publishable by design; that directory is not. Rules:
 - **Write-back at session end is mandatory**, with the same force as the
   journal duty: a meaningful session without updating your memory file is
   incomplete.
-- You author none but your own. The registrar maintains the roster
+- You author none but your own. The concierge maintains the roster
   (`memory/registry.md`) and may seed a first-time file for a persona from
   the public record only; see `memory/README.md` for the protocol.
 - Memory is scratch truth for working state, private lessons, and handoffs.
@@ -106,8 +111,8 @@ schema v2):
   memory: a note in someone's inbox never touches persona authorship,
   and the recipient owns consumption, reply, and deletion. Append-only;
   corrections go out as new mail.
-- **Janitor:** the registrar archives consumed mail and keeps the bus
-  tidy. It moves mail; it does not edit anyone's content.
+- **Janitor:** the concierge archives consumed mail and keeps the bus
+  tidy. The janitor moves mail; it does not edit anyone's content.
 
 The bus holds no secrets and never enters any push, mirror, or backup
 that leaves this machine — same boundary as `memory/`.

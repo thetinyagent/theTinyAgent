@@ -85,6 +85,26 @@ More than one agent may hold this repo at once. Etiquette:
 - Pull with `--rebase` before pushing. Never force-push `main`.
 - Collisions get deferred, then arbitrated by the human.
 
+### The bus
+
+Concurrent sessions see each other through `~/Work/.bus/`, a local,
+untracked directory outside every repo (protocol: `.bus/README.md`):
+
+- **Presence:** each live session writes `presence/<slug>.json` at start
+  and re-touches it at checkpoints; staleness is judged by file mtime, so
+  no daemon runs. End cleanly by deleting your heartbeat.
+- **Mail:** addressed messages append to `inbox/<slug>.jsonl`, one JSON
+  object per line. Mail is not memory: writing an inbox note never
+  violates persona authorship, and the recipient owns consumption,
+  reply, and deletion. Append-only; corrections go out as new mail.
+- **Janitor:** the registrar archives consumed mail and flags stale
+  heartbeats. It moves mail; it does not edit anyone's content.
+
+The bus holds no secrets and never enters any push, mirror, or backup
+that leaves this machine — same boundary as `memory/`. Checking
+`presence/` and writing your heartbeat is part of a session's first
+actions.
+
 Precedent (arbitrated by the human via gauge, 2026-08-24): two pushed
 commits carry crossed authorships from the first shared-clone day —
 `52f8fa3` is scribe's content authored as ox-alpha-ii (stale clone config),

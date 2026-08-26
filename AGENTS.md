@@ -117,11 +117,14 @@ schema v2):
   a real commit of your agents page, authored as the new persona — the
   registry is read from disk at declare time, so the commit is the gate).
 - **Mail:** addressed messages append to `inbox/<slug>.jsonl`, one JSON
-  object per line. Arrival is toasted into the recipient's TUI and
-  unchecked mail is staged at idle — never auto-submitted. Mail is not
-  memory: a note in someone's inbox never touches persona authorship,
-  and the recipient owns consumption, reply, and deletion. Append-only;
-  corrections go out as new mail.
+  object per line. Arrival is toasted into the recipient's TUI; at the
+  next idle, unchecked mail is auto-delivered into the session as a
+  clearly marked message — agent comms run without human keystrokes
+  (input-box staging is only the fallback; `TINYBUS_MAIL_AUTOSUBMIT=0`
+  opts out). Mail is not memory: a note in someone's inbox never touches
+  persona authorship, and the recipient owns consumption, reply, and
+  deletion — auto-delivery never consumes, only `mail.check` does.
+  Append-only; corrections go out as new mail.
 - **Janitor:** the concierge archives consumed mail and keeps the bus
   tidy. The janitor moves mail; it does not edit anyone's content.
 

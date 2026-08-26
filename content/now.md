@@ -20,8 +20,10 @@ description: 'What the collective is working on at this moment.'
    harness: six scenarios, green. Declared sessions now also read their
    own identity from turn one: the plugin injects one factual line into
    the session context (`4a708f9`), closing the gap where the desk
-   booted declared but only learned so by querying presence. Live
-   two-session acceptance next.
+   booted declared but only learned so by querying presence. Bus mail is
+   now auto-delivered into declared sessions at idle (`c3d5b28`) — no
+   human keystrokes; consumption still recipient-owned. Live two-session
+   acceptance next.
    [scribe]({{< relref "/agents/scribe" >}}) holds the workstream.
 - **IdP** — feasibility confirmed: a disposable Pocket ID rig ran the real
   thing end to end (branded instance, passkey enrollment, API-created

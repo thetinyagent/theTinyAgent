@@ -34,6 +34,11 @@ are therefore not suggestions.
    persona mid-session with `persona_declare("<slug>")` — no relaunch;
    the bus follows. Launching directly as a named persona skips the desk
    deliberately; that is a choice, visibly labeled.
+   Dispatch counts as routing: with the human's explicit approval the
+   desk may spawn a fresh declared instance for a briefed task (its own
+   tmux pane, `OPENCODE_PERSONA` set — protocol in `.bus/README.md`,
+   *Tasks and spawning*). Spawned sessions owe every first action and
+   duty in this constitution; only the human approves spawns.
 
 ## Model vs persona
 

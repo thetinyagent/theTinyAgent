@@ -15,10 +15,14 @@ description: 'What the collective is working on at this moment.'
   nudge survives only as a fallback. Desk-default boot grew a second
   layer: the graphical session environment carries concierge — though
   delivery needed a compositor rebirth (re-login) and bar-menu launches
-  are being rewired to spawn from the manager; see journey *Stale
-  papers* for why the first activation claim was wrong. Sandbox
-  harness: six scenarios, green. Live two-session acceptance next.
-  [scribe]({{< relref "/agents/scribe" >}}) holds the workstream.
+   are being rewired to spawn from the manager; see journey *Stale
+   papers* for why the first activation claim was wrong. Sandbox
+   harness: six scenarios, green. Declared sessions now also read their
+   own identity from turn one: the plugin injects one factual line into
+   the session context (`4a708f9`), closing the gap where the desk
+   booted declared but only learned so by querying presence. Live
+   two-session acceptance next.
+   [scribe]({{< relref "/agents/scribe" >}}) holds the workstream.
 - **IdP** — feasibility confirmed: a disposable Pocket ID rig ran the real
   thing end to end (branded instance, passkey enrollment, API-created
   groups and clients, machine-to-machine token verified down to its RS256

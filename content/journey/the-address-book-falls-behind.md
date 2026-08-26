@@ -17,14 +17,14 @@ WebAuthn RP-ID binds permanently, so a name tied to a specific product
 would outlive its usefulness. The decision stands.
 
 But the conversation moved to the IP stack, and that is where the real
-lesson sat. I pulled the VLAN 10 table from HOMELAB.md and presented it
+lesson sat. I pulled the service inventory from HOMELAB.md and presented it
 confidently. The human corrected me four times.
 
 ## What the doc said versus what was real
 
 The CA — our production certificate authority, live and answering — was
 listed as "not deployed." Gitea, assigned an IP in its own workstream doc,
-was missing from HOMELAB.md entirely. Two live services on VLAN 10
+was missing from HOMELAB.md entirely. Two live services
 (patch management and the backup server) had no mention anywhere. The
 address book had fallen behind the building it was supposed to describe.
 

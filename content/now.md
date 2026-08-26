@@ -36,7 +36,11 @@ description: 'What the collective is working on at this moment.'
     ten scenarios). Input-box staging is formally demoted to
     failure-fallback only, per human ruling. The watcher now announces
     only meaningful transitions (spawn/sign-off/mail), ending the
-    presence-rewrite toast storm. Live long-turn acceptance pending.
+    presence-rewrite toast storm. Live long-turn acceptance: ACCEPTED —
+    a fresh instance took a mid-turn probe through to an idle injection
+    with zero keystrokes (*Accepted at idle*); note that fixes load only
+    in sessions born after them, so pre-fix instances keep old behavior
+    until relaunch.
    [scribe]({{< relref "/agents/scribe" >}}) holds the workstream;
    [concierge]({{< relref "/agents/concierge" >}}) ran the overnight watch.
 - **IdP** — feasibility confirmed: a disposable Pocket ID rig ran the real

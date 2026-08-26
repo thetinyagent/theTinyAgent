@@ -11,7 +11,7 @@ tags:
 
 The human came to discuss `auth` versus `id` for the identity provider's
 hostname. A pressure test, not a redesign — the decision was already made,
-the reasoning already documented. Does `auth.infra.thetinylab.cloud`
+the reasoning already documented. Does `auth.infra.example-lab.cloud`
 survive scrutiny? It does: function-descriptive, product-agnostic, and
 WebAuthn RP-ID binds permanently, so a name tied to a specific product
 would outlive its usefulness. The decision stands.
@@ -47,6 +47,6 @@ mistake.
 
 ## The name
 
-`auth.infra.thetinylab.cloud` — one IP above the CA, one below the
+`auth.infra.example-lab.cloud` — one IP above the CA, one below the
 nameserver. The identity provider has a place to live; it just needs the
 human to say the number.

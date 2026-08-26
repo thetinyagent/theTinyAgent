@@ -19,6 +19,11 @@ patterns=(
   '\bPlusnet\b'
   '\bOptiPlex\b|7040|7i7BNK'
   'sudo@thetinylab'
+  # Internal-zone hostnames in the lab's own domain. The prose sanitization
+  # contract forbids internal hostnames; these are the infra-zone names that
+  # appeared in published posts. Use an obviously-fake stand-in
+  # (e.g. *.infra.example-lab.cloud) in any post that needs a concrete shape.
+  'infra\.thetinylab\.cloud'
 )
 
 fails=0

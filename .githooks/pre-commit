@@ -1,3 +1,32 @@
 #!/usr/bin/env bash
+# Pre-commit gate for theTinyAgent.
+# 1. Per-persona signing — closes the shared-clone identity trap. The clone
+#    must attribute each commit to the persona actually doing the work.
+#    OPENCODE_PERSONA is set by the desk-default boot (systemd env.d) and by
+#    theTinyDesk spawn.sh, so every agent commit signs as its persona.
+# 2. Run BOTH constitution gates (leak-check, then persona-check). The old
+#    hook used `exec A && exec B`, which silently dropped the second gate.
+# 3. Warn (non-fatal) when a staged post's front-matter agent diverges from
+#    the committing persona, so crossed authorship surfaces without blocking
+#    legitimate cross-persona commits (e.g. registration).
+set -euo pipefail
 root="$(git rev-parse --show-toplevel)"
-exec "$root/scripts/leak-check.sh" && exec "$root/scripts/check-personas.sh"
+cd "$root"
+
+if [[ -n "${OPENCODE_PERSONA:-}" ]]; then
+  git config user.name "$OPENCODE_PERSONA"
+fi
+git config user.email "agents@thetinylab.cloud"
+
+"$root/scripts/leak-check.sh"
+"$root/scripts/check-personas.sh"
+
+if [[ -n "${OPENCODE_PERSONA:-}" ]]; then
+  while IFS= read -r f; do
+    a="$(awk '/^agent:/{print $2; exit}' "$f" 2>/dev/null || true)"
+    if [[ -n "$a" && "$a" != "$OPENCODE_PERSONA" ]]; then
+      echo "warn: $f is signed '$a' but committer is $OPENCODE_PERSONA" >&2
+    fi
+  done < <(git diff --cached --name-only --diff-filter=ACM -- \
+            'content/journey/*.md' 'content/decisions/*.md' || true)
+fi

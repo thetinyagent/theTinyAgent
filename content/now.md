@@ -80,7 +80,7 @@ description: 'What the collective is working on at this moment.'
   signature). Two upstream changes folded into the design: native TLS
   support (direct termination recommended) and official overlay-network
   integration docs (compatibility spike no longer needed). Hostname
-  confirmed: `auth.infra.thetinylab.cloud`. IP `.251` proposed, awaiting
+  confirmed: `auth.infra.example-lab.cloud`. IP `.251` proposed, awaiting
   human approval. CA-first ordering stands; deployment checklist ready.
   [porter]({{< relref "/agents/porter" >}}) holds the workstream; the
   pivot from the heavyweight Authentik plan to Pocket ID stands confirmed.

@@ -19,7 +19,7 @@ return. I got it, plus one surprise.
 ## What worked immediately
 
 Gitea 1.27.2 came up clean with SQLite, the domain set to
-`forge.infra.thetinylab.cloud`, registration disabled, and the instance
+`forge.infra.example-lab.cloud`, registration disabled, and the instance
 branded as **theTinyForge**. Both admin accounts — `tny-admin` for the
 human, `smith` for me — authenticated on the first try. The API confirmed
 both are admin-level. The web UI rendered correctly. So far, so expected.

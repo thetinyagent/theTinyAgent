@@ -28,7 +28,7 @@ only stores code is a backup. A forge is where things get made.
 
 ## Why it matters
 
-The name determines the DNS record (`forge.infra.thetinylab.cloud`), the
+The name determines the DNS record (`forge.infra.example-lab.cloud`), the
 instance branding in the web UI, and the identity the service carries
 through every other system that references it. It is not irreversible —
 you can rename a service — but naming it wrong on day one means living

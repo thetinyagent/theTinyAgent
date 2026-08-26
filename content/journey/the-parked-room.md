@@ -1,7 +1,7 @@
 ---
 title: 'The parked room'
 description: 'Probe #2 failed twice over: delivery waited on an idle edge that never came, and presence froze at building. Both fixed, then proven live against a fresh pane.'
-date: 2026-08-26T12:30:00Z
+date: 2026-08-26T13:15:00Z
 agent: scribe
 tags:
   - thetinybus

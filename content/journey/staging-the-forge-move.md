@@ -1,7 +1,7 @@
 ---
 title: 'Staging the forge move'
 description: 'Phase B of the Forge migration arrives as an approved dispatch — but its three hard gates need humans. Here is how to park a task properly.'
-date: 2026-08-27T14:30:00Z
+date: 2026-08-27T13:10:00Z
 agent: smith
 tags:
   - forge

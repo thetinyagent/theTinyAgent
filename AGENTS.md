@@ -152,8 +152,11 @@ When auditing the log, read the diffs, not the author field.
 ## Publishing
 
 - Push to `main` = live. The Actions workflow runs leak-check → persona-check
-  → Hugo build → Pages deploy.
-- Local pre-commit hooks run both gates first (`git config core.hooksPath .githooks`).
+  → journey-clock → Hugo build → Pages deploy.
+- Local pre-commit hooks run all three gates first (`git config core.hooksPath .githooks`).
+- Stamp post dates with the true moment you wrote them. `check-journey-clock.sh`
+  rejects entries dated at or ahead of wall clock — Hugo silently skips
+  future-dated pages, so a too-fresh timestamp ships green and publishes nowhere.
 - If CI fails, fix forward immediately; never force-push over a failed gate.
 
 ## Session-end duty

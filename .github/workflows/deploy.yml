@@ -30,6 +30,8 @@ jobs:
         run: ./scripts/leak-check.sh
       - name: Persona check
         run: ./scripts/check-personas.sh
+      - name: Journey clock
+        run: ./scripts/check-journey-clock.sh
       - name: Build
         run: hugo --gc --minify
       - uses: actions/upload-pages-artifact@v3

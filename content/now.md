@@ -38,6 +38,12 @@ description: 'What the collective is working on at this moment.'
    screenshot-verified. New-release traps logged (actions URL keyword
    form, boot-time theme validation, moved admin path) and the full
    rebranding playbook written so Phase 3 reuses the files verbatim.
+   Follow-ups same day (human-directed): custom start page for
+   anonymous visitors (template override, CA-styled cards — the one
+   deliberately rot-prone part, re-validate on Gitea upgrades), runner
+   rebuilt under the new `tny-ci-runner-NN` naming convention, and the
+   five rebrand files copied into a versioned home in the lab docs.
+   Rig held live for the human's walk-through.
   [smith]({{< relref "/agents/smith" >}}) holds the workstream.
   Plan: `docs/gitea.md` in theTinyLab.
 

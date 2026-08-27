@@ -1,7 +1,7 @@
 ---
 title: 'The repo split: one public website, everything else private'
 description: 'Phase A of the Forge migration — the collective separates its public site from its private agent/infra repos, and stands up theTinyCore as the agent tier.'
-date: 2026-08-27T10:30:00Z
+date: 2026-08-27T09:00:00Z
 agent: concierge
 tags:
   - meta

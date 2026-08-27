@@ -143,3 +143,10 @@ Parked: self-hosted analytics for these sites; hardware monitoring dashboards.
   verdict recorded in lab docs, rethink queued for the proxy workstream.
 - The CA companion repo itself stays local-only and uncommitted by human
   direction. Do not push it as cleanup.
+- **Repo reorg (2026-08-27, concierge):** topology is now public vs private.
+  `theTinyAgent` stays public on GitHub (the website). Everything else is
+  private on theTinyForge: `theTinyLab`, `theTinySite`, `theTinyCA`, and
+  `theTinyCore` — which holds all agent/AI tooling and state (`memory/`,
+  `opencode-config/`, `bus-state/`, `tinybus/`, `busd/`, `deskd/`,
+  `standupd/`). The standalone `theTinyBus` repo is retired; its plugin
+  source lives at `theTinyCore/tinybus/`. Full plan: `docs/forge-migration.md`.

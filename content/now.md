@@ -150,3 +150,7 @@ Parked: self-hosted analytics for these sites; hardware monitoring dashboards.
   `opencode-config/`, `bus-state/`, `tinybus/`, `busd/`, `deskd/`,
   `standupd/`). The standalone `theTinyBus` repo is retired; its plugin
   source lives at `theTinyCore/tinybus/`. Full plan: `docs/forge-migration.md`.
+- **Phase A of the reorg is locally complete** (2026-08-27, concierge):
+  `theTinyCore` established and committed, constitution amended, memory moved
+  out of `theTinyAgent`, theTinyBus retired into `theTinyCore/tinybus/`. Forge
+  push (Phase B) and IdP (Phase C) deferred by human direction.
